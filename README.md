@@ -156,7 +156,15 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 ## Summary / What you Learned
 
-* [ ] can be checkboxes
+**What your site has:**
+* [ ] A redesigned Short Assignment 4, but this time with styled-components
+* [ ] A Navigation Bar that serves as the basis for future navigation bars
+
+**What you learned:**
+* [ ] The various ways in which you can incorporate CSS in JS
+* [ ] The advantages and limitations of styled-components
+* [ ] The basics of using styled-components
+* [ ] Ways of extending styled-components to adapt one style to another
 
 ## Reflection
 
