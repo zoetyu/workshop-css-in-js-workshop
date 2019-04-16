@@ -10,7 +10,7 @@ As we learned in class, some highlights of style-components
 
 **Automatic critical CSS:** styled-components keeps track of which components are rendered on a page and injects their styles and nothing else, fully automatically. **Easier deletion of CSS:** If the component is unused (which tooling can detect) and gets deleted, all its styles get deleted with it. **Simple dynamic styling:** adapting the styling of a component based on its props or a global theme is simple and intuitive without having to manually manage dozens of classes. **Painless maintenance:** you never have to hunt across different files to find the styling affecting your component, so maintenance is a piece of cake no matter how big your codebase is. **Automatic vendor prefixing:** write your CSS to the current standard and let styled-components handle the rest.
 
-(source: hackernoon.com)
+
 
 ## Overview
 
@@ -178,10 +178,18 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 
 *2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
 
-* [ ] 2 reflection questions
-* [ ] 2 reflection questions
+* [ ] What exactly is CSS-in-javascript and how does it differ from CSS stylesheets and inline styling?
+* [ ] Why wouldn’t we always want to use CSS-in-javascript?
 
 
 ## Resources
 
-* cite any resources
+* https://blog.bitsrc.io/9-css-in-js-libraries-you-should-know-in-2018-25afb4025b9b
+* https://medium.com/@himrc/why-i-love-css-in-js-aphrodite-vs-radium-b2c9bea9a182
+* https://github.com/cssinjs/jss-isolate
+* https://reactjs.org/docs/components-and-props.html
+* https://www.styled-components.com/ 
+* https://medium.freecodecamp.org/a-5-minute-intro-to-styled-components-41f40eb7cd55 
+* https://hackernoon.com/all-you-need-to-know-about-css-in-js-984a72d48ebc
+* https://tylermcginnis.com/podcast/max-stoiber/
+
