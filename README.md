@@ -1,6 +1,6 @@
 # CS52 Workshops:  CSS in JavaScript
 
-![](http://i.giphy.com/eUh8NINbZf9Ys.gif)
+![](https://media.giphy.com/media/fs68M1NGzYwv0aQmhO/giphy.gif)
 
 Brief motivation here as well as in presentation
 
