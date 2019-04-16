@@ -79,7 +79,7 @@ class Navbar extends Component {
 
 export default Navbar;
 ```
-... Wait a second, what's <Bar>? What's <Button>? What's <List> and <ListItem>? Great question! For styled-components, we will define a ```const Bar, Button, List,``` and ```ListItem``` that will be a styled div, button, ul, and li. styled-components lets us essentially create classes for each element by declaring them as ```const```.  Go ahead and add the following code above your class Navbar:
+... Wait a second, what's ```<Bar>```? What's ```<Button>```? What's ```<List>``` and ```<ListItem>```? Great question! For styled-components, we will define a ```const Bar, Button, List,``` and ```ListItem``` that will be a styled div, button, ul, and li. styled-components lets us essentially create classes for each element by declaring them as ```const```.  Go ahead and add the following code above your class Navbar:
 
 ```
 const Bar = styled.div`
