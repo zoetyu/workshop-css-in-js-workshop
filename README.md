@@ -250,16 +250,22 @@ What we've done here is use the "as" polymorphic prop to dynamically swap out th
 Here's what you should end up with:
 <img width="1038" alt="Screen Shot 2019-04-16 at 11 32 10 AM" src="https://user-images.githubusercontent.com/38498065/56223601-13eb4200-603c-11e9-8adc-cd2af31bbb37.png">
 
-What about selectors, like ```:hover``` or ```:active``` ? You can add that right into your styled component! Let's make the link buttons have the red (#F05252) background and white text on hover. Here's a code snippet to help you start out:
+What about selectors, like ```:hover``` or ```:active``` ? You can add that right into your styled component! Let's make the link buttons have the red (#F05252) background and white text on hover. Maybe add in a little ease-in-out transform to it for that smooooth user experience ;) Here's a code snippet to help you start out:
 
 ```
 // const ListItem2 = styled(Button)`
 // ...
+
+
 &:hover {
   // your code here
 }
 `;
+
+
 ```
+
+And there you have it! 
 
 
 ## Summary / What you Learned
