@@ -54,17 +54,101 @@ yarn start
 
 ### Step 2: Let's get stylin'
 
-Now that we’ve made sure the webapp is functioning, let’s put our new CSS in JS skills to the test.
+Now that we’ve made sure the webapp is functioning, let’s put our new CSS in JS skills to the test. For the short assignment, we used styles.scss to make our page look nice. For this workshop, we are going to use the styled-components library to style our page directly in our JavaScript files.
 
-* Explanations of the what **and** the why behind each step. Try to include:
-  * higher level concepts
-  * best practices
-
-Remember to explain any notation you are using.
-
+Let's get started with our search bar first. For every file that we use styled-components in, we will need to import the library. So, let's start by doing that at the top of our ```search_bar.js``` file.
 ```javascript
-/* and use code blocks for any code! */
+import styled from 'styled-components';
 ```
+
+Great, now that we've got that loaded in let's create our first styled component. Above the ```SearchBar``` class, paste this code to create a styled search component.
+```
+const Search = styled.div`
+  margin-bottom: 20px;
+`;
+```
+
+Check our ```style.scss``` file. Can you see which element we might be restyling?
+
+Next, paste in this styling code below our ```Search``` component.
+```
+const Input = styled.input`
+  font-size: 1.5em;
+  border-radius: .25em;
+`;
+```
+This block might be a little more obvious as to which element we are mimicking, but feel free to check the style file again and compare.
+
+Next, we need to update how our `SearchBar` renders. Our return statement should now look like:
+```
+<Search>
+    <Input onChange={this.onInputChange} value={this.state.searchterm} />
+</Search>
+```
+Now, we can take the `#search-bar` section out of our .scss and we should notice no difference! Which isn't that exciting but it does mean we successfully used `styled-components`!
+
+Ok, let's pause for a second and understand what is going on. When we created a styled component, we specify its HTML tag using dot notation. Then, inside the special quotes, we can write CSS code as normal. We can then use these components in React just like we did in Short Assignment 4.
+
+Moving down our `styles.scss` file, let's do `#video-detail` next. It's one line, but we're committed at this point. At the top of our `video_detail.js` file paste this code block:
+```
+import styled from 'styled-components';
+
+const Detail = styled.div`
+  width: 100%;
+`;
+```
+
+And then let's edit our return statement in the `VideoDetail` constructor:
+```
+<Detail>
+        <div className="embed-responsive embed-responsive-16by9">
+          {/* eslint-disable-next-line jsx-a11y/iframe-has-title */}
+          <iframe className="embed-responsive-item" src={url} />
+        </div>
+        <div className="details">
+          <div>{video.snippet.title}</div>
+          <div>{video.snippet.description}</div>
+        </div>
+ </Detail>
+ ```
+ 
+ We can now delete or comment out the `#video-detail` section from our `styles.scss`!
+ Let's move to `video_list_item.js` next to style our list elements. Again, at the top of our file paste:
+ ```
+ import styled from 'styled-components';
+
+const VideoItem = styled.li`
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  width: 25vw;
+  padding: 10px;
+
+  :hover {
+    background-color: gray;
+  }
+`;
+```
+
+Let's finish in our `index.js` file. Add the import statement, this time above our imports for the other components of our webpage. Then, before our `App` class, paste:
+```
+const VideoSection = styled.div`
+  display: flex;
+`;
+```
+
+Finally, update our `App` return to look like:
+```
+<div>
+        <SearchBar onSearchChange={this.search} />
+
+        <VideoSection>
+          <VideoList onVideoSelect={selectedVideo => this.setState({ selectedVideo })} videos={this.state.videos} />
+          <VideoDetail video={this.state.selectedVideo} />
+        </VideoSection>
+</div>
+```
+Now, we can comment out or delete all of our `styles.scss` file except for the `body` section. And now our webpage is entirely styled by components!
 
 
 ### Step ??: Creating a Nav Bar
