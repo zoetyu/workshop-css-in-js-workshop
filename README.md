@@ -174,9 +174,8 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 * [ ] The basics of using styled-components
 * [ ] Ways of extending styled-components to adapt one style to another
 
-## Reflection
+## Reflection Questions
 
-*2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
 
 * [ ] What exactly is CSS-in-javascript and how does it differ from CSS stylesheets and inline styling?
 * [ ] Why wouldn’t we always want to use CSS-in-javascript?
