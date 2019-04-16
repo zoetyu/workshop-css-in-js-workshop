@@ -151,7 +151,7 @@ Finally, update our `App` return to look like:
 Now, we can comment out or delete all of our `styles.scss` file except for the `body` section. And now our webpage is entirely styled by components!
 
 
-### Step ??: Creating a Nav Bar
+### Step 3: Creating a Nav Bar
 We're going to create a Navigation Bar from scratch and add some nice styled-components to it!
 Create a new file in your /src folder called ```nav-bar.js```. We're going to start with the bare bones of a navigation bar and see how we'd style it. 
 ```
@@ -250,7 +250,16 @@ What we've done here is use the "as" polymorphic prop to dynamically swap out th
 Here's what you should end up with:
 <img width="1038" alt="Screen Shot 2019-04-16 at 11 32 10 AM" src="https://user-images.githubusercontent.com/38498065/56223601-13eb4200-603c-11e9-8adc-cd2af31bbb37.png">
 
-Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
+What about selectors, like ```:hover``` or ```:active``` ? You can add that right into your styled component! Let's make the link buttons have the red (#F05252) background and white text on hover. Here's a code snippet to help you start out:
+
+```
+// const ListItem2 = styled(Button)`
+// ...
+&:hover {
+  // your code here
+}
+`;
+```
 
 
 ## Summary / What you Learned
