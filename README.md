@@ -119,7 +119,7 @@ Now let's import Navbar to your ```index.js``` file:
 import Navbar from './components/nav_bar';
 ```
 
-and add it above your <SearchBar/> in the render function:
+and add it above your ```<SearchBar/>``` in the render function:
 ```
 <div><Navbar /></div>
 ```
