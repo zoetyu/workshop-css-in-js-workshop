@@ -181,6 +181,11 @@ Here's a resource for [github markdown](https://guides.github.com/features/maste
 * [ ] The basics of using styled-components
 * [ ] Ways of extending styled-components to adapt one style to another
 
+## Extra Credit
+* Restyle all the components you built in SA4 and make it look beauuuutiful!
+* Create a footer for your page
+* Change the Navigation Bar so the links themselves are components rather than static hyperlinks
+
 ## Reflection Questions
 
 
