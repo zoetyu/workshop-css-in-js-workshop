@@ -27,7 +27,7 @@ yarn add lodash.debounce react react-dom react-router axios
 
 ## Step by Step
 
-## Step 1: Add your API Key
+### Step 1: Add your API Key
 
 Before we begin styling, edit the `youtube-api.js` file to include your API key.  You should use the same key you used for the short assignment. 
 
@@ -37,7 +37,7 @@ Now start up your webpack-dev-server!  Open the localhost in your browser, and y
 yarn start
 ```
 
-## Step 2: Let's get stylin'
+### Step 2: Let's get stylin'
 
 Now that we’ve made sure the webapp is functioning, let’s put our new CSS in JS skills to the test.
 
@@ -52,7 +52,7 @@ Remember to explain any notation you are using.
 ```
 
 
-## Step ??: Creating a Nav Bar
+### Step ??: Creating a Nav Bar
 We're going to create a Navigation Bar from scratch and add some nice styled-components to it!
 Create a new file in your /src folder called ```nav-bar.js```. We're going to start with the bare bones of a navigation bar and see how we'd style it. 
 
