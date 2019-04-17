@@ -4,9 +4,9 @@
 
 Why does this matter?  Well, as we learned today, not all CSS features work with JavaScript event handlers. Darn! Soooo JS? 
 YES! With JS, CSS is generated, you can use every media query and pseudo selector. Some libraries (like jss, styled-components) even add support for cooool, non-CSS-native features.
-Gone are the days of long style sheets. Here to stay is CSS in JS.
+Gone are the days of long style sheets. Here to stay is CSS in JS :sunglasses:.
 
-As we learned in class, some highlights of style-components 
+As we learned in class, some highlights of style-components are: 
 
 **Automatic critical CSS:** styled-components keeps track of which components are rendered on a page and injects their styles and nothing else, fully automatically. **Easier deletion of CSS:** If the component is unused (which tooling can detect) and gets deleted, all its styles get deleted with it. **Simple dynamic styling:** adapting the styling of a component based on its props or a global theme is simple and intuitive without having to manually manage dozens of classes. **Painless maintenance:** you never have to hunt across different files to find the styling affecting your component, so maintenance is a piece of cake no matter how big your codebase is. **Automatic vendor prefixing:** write your CSS to the current standard and let styled-components handle the rest.
 
@@ -14,13 +14,15 @@ As we learned in class, some highlights of style-components
 
 ## Overview
 
-At this point, we have all (hopefully) finished Short Assignment 4 and have some experience using React to build a video application.  For this workshop, we are going to restyle SA4 using CSS in JS to replace our style.scss sheet.  Once we have successfully transferred the baseline style, we'll see what else we can do with CSS in JS by adding a nav bar to the page and giving it some style!  We’ll walk you through this process step by step, but feel free to change the styles up as you go.
+At this point, we have all (hopefully) finished Short Assignment 4 :grimacing: and have some experience using React to build a video application.  For this workshop, we are going to restyle SA4 using CSS in JS to replace our style.scss sheet.  Once we have successfully transferred the baseline style, we'll see what else we can do with CSS in JS by adding a nav bar to the page and giving it some style!  We’ll walk you through this process step by step, but feel free to change the styles up as you go.
 
 ## Setup
 
-Download/clone your own copy of this repo so you have all of the necessary code on your computer. Cd into the workshop-css-in-js-workshop folder (if you couldn’t tell, this is a workshop). You should have a README.md, img folder, package.json, src folder, webpack.config.js, and yarn.lock. Since we are using javascript styling instead of CSS now, most of the files we will be working with will be javascript files. 
+Download your own copy of this repo so you have all of the necessary code on your computer. :computer: `cd` into the workshop-css-in-js-workshop folder (if you couldn’t tell, this is a workshop). You should have a README.md, img folder, package.json, src folder, webpack.config.js, and yarn.lock. Since we are using javascript styling instead of CSS now, most of the files we will be working with will be javascript files. 
 
-Let's take care of a few more set-up steps before we begin (check again to make sure you are in the correct directory!).  First things first, we should probably install styled-components!
+Let's take care of a few more set-up steps before we begin (check again to make sure you are in the correct directory!).  
+
+First things first, we should probably install styled-components!
 
 ```
 npm install --save styled-components
@@ -39,18 +41,23 @@ yarn add lodash.debounce react react-dom react-router axios
 yarn add --dev styled-components
 ```
 
+Nice!  Now everything should be set up and we can move on to the fun stuff :thumbsup:
 
 ## Step by Step
 
-### Step 1: Add your API Key
+### Step 1: Add your own YouTube API Key
 
-Before we begin styling, edit the `youtube-api.js` file to include your API key.  You should use the same key you used for the short assignment. 
+Before we begin styling, edit the `youtube-api.js` file (in the src folder) to include your API key.  You should use the same key you used for the short assignment. 
+```
+const API_KEY = 'YOUR SAVED API KEY'; // add your own key here
+```
 
-Now start up your webpack-dev-server!  Open the localhost in your browser, and you should see the SA4 frontend webapp with some basic styling.
+Now start up your webpack-dev-server!  
 
 ```
 yarn start
 ```
+Open the localhost in your browser, and you should see the SA4 frontend webapp with some basic styling.
 
 ### Step 2: Let's get stylin'
 
