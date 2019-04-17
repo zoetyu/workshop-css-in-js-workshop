@@ -2,8 +2,10 @@
 
 ![](https://media.giphy.com/media/fs68M1NGzYwv0aQmhO/giphy.gif)
 
-Why does this matter?  Well, as we learned today, not all CSS features work with JavaScript event handlers. Darn! Soooo JS? 
-YES! With JS, CSS is generated, you can use every media query and pseudo selector. Some libraries (like jss, styled-components) even add support for cooool, non-CSS-native features.
+Why are we making the switch from CSS and inline?  Well, as we learned today, not all CSS features work with JavaScript event handlers. 
+Darn! 
+Soooo JS? YES! With JS you can use every media query and pseudo selector. Some libraries (like jss, styled-components) even add support for cooool, non-CSS-native features.
+
 Gone are the days of long style sheets. Here to stay is CSS in JS :raised_hands:.
 
 As we learned in class, some highlights of style-components are: 
