@@ -86,7 +86,7 @@ const Input = styled.input`
 ```
 This block might be a little more obvious as to which element we are mimicking, but feel free to check the style file again and compare.
 
-Next, we need to update how our `SearchBar` renders. Our return statement should now look like:
+Next, we need to update how our `SearchBar` renders by replacing the previous code with our newly created ```Input``` component. Our return statement should now look like:
 ```
 <Search>
     <Input onChange={this.onInputChange} value={this.state.searchterm} />
@@ -193,7 +193,7 @@ class NavBar extends Component {
 export default NavBar;
 
 ```
-... Wait a second, what's ```<Bar>```? What's ```<Button>```? What's ```<List>``` and ```<ListItem>```? Great question! For styled-components, we will define a ```const Bar, Button, List,``` and ```ListItem``` that will be a styled div, button, ul, and li. styled-components lets us essentially create classes for each element by declaring them as ```const```.  Go ahead and add the following code above your class NavBar:
+... Wait a second, what's ```<Bar>```? What's ```<Button>```? What's ```<List>``` and ```<ListItem>```? Great question! For styled-components, we will define a ```const Bar, Button, List,``` and ```ListItem``` that will be a styled div, button, ul, and li. Go ahead and add the following code above your class NavBar (just underneath "import React.." to create our styled-components:
 
 ```
 import styled from 'styled-components';
@@ -254,7 +254,7 @@ color: #F05252;
 background: white;
 `;
 ```
-Now replace our previous list of ListItem with the following code:
+Now replace our previous list of ListItem with the following code (you can go ahead and delete the ```const ListItem``` to avoid eslint errors:
 ```
 <ListItem2 as="a" href="/">Home</ListItem2>
 <ListItem2 as="a" href="/">About</ListItem2>
