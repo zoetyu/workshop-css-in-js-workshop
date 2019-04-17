@@ -66,7 +66,7 @@ Open the localhost in your browser, and you should see the SA4 frontend webapp w
 
 Now that we’ve made sure the webapp is functioning, let’s put our new CSS in JS skills to the test. For the short assignment, we used styles.scss to make our page look nice. For this workshop, we are going to use the styled-components library to style our page directly in our JavaScript files.
 
-Let's get started with our search bar first. For every file that we use styled-components in, we will need to import the library. So, let's start by doing that at the top of our ```search_bar.js``` file.
+Let's get started with our search bar first. For every file that we use styled-components in, we will need to import the library. So, let's start by doing that at the top of our ```search_bar.js``` file (in ./src/components).
 ```javascript
 import styled from 'styled-components';
 ```
