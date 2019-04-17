@@ -4,7 +4,7 @@
 
 Why does this matter?  Well, as we learned today, not all CSS features work with JavaScript event handlers. Darn! Soooo JS? 
 YES! With JS, CSS is generated, you can use every media query and pseudo selector. Some libraries (like jss, styled-components) even add support for cooool, non-CSS-native features.
-Gone are the days of long style sheets. Here to stay is CSS in JS :sunglasses:.
+Gone are the days of long style sheets. Here to stay is CSS in JS :raised_hand:.
 
 As we learned in class, some highlights of style-components are: 
 
@@ -18,27 +18,28 @@ At this point, we have all (hopefully :grimacing:) finished Short Assignment 4 a
 
 ## Setup
 
-Download your own copy of this repo so you have all of the necessary code on your computer. :computer: cd into the workshop-css-in-js-workshop folder (if you couldn’t tell, this is a workshop). You should have a README.md, img folder, package.json, src folder, webpack.config.js, and yarn.lock. Since we are using javascript styling instead of CSS now, most of the files we will be working with will be javascript files. 
+Download your own copy of this repo so you have all of the necessary code on your computer. :computer:cd into the workshop-css-in-js-workshop folder (if you couldn’t tell, this is a workshop). You should have a README.md, img folder, package.json, src folder, webpack.config.js, and yarn.lock. Since we are using javascript styling instead of CSS now, most of the files we will be working with will be javascript files. 
 
 Let's take care of a few more set-up steps before we begin (check again to make sure you are in the correct directory!).  
 
-First things first, we should probably install styled-components!
+First, let's take care of some general steps.  Let's add in support for React and JSX in babel,
+```
+yarn add --dev @babel/preset-react @babel/plugin-proposal-class-properties
+```
+and take care of some of our dependencies.
+```
+yarn add lodash.debounce react react-dom react-router axios
+```
 
+Before we can get into the restyling portion, we probably should install styled-components :confused:
 ```
 npm install --save styled-components
 ```
 
-Let's add in support for React and JSX in babel: 
+Finally, let’s finish adding the necessary dependencies: 
 
 ```
-yarn add --dev @babel/preset-react @babel/plugin-proposal-class-properties
-```
-
-Finally, let’s take care of all our dependencies: 
-
-```
-yarn add lodash.debounce react react-dom react-router axios
-yarn add --dev styled-components
+yarn add styled-components
 ```
 
 Nice!  Now everything should be set up and we can move on to the fun stuff :thumbsup:
@@ -61,7 +62,7 @@ Open the localhost in your browser, and you should see the SA4 frontend webapp w
 
 
 
-### Step 2: Let's get stylin'
+### Step 2: Let's get stylin' :sunglasses:
 
 Now that we’ve made sure the webapp is functioning, let’s put our new CSS in JS skills to the test. For the short assignment, we used styles.scss to make our page look nice. For this workshop, we are going to use the styled-components library to style our page directly in our JavaScript files.
 
@@ -79,7 +80,7 @@ const Search = styled.div`
 
 Check our ```style.scss``` file. Can you see which element we might be restyling?
 
-Next, paste in this styling code below our ```Search``` component.
+Next, paste in this styling code below our newly added ```Search``` component.
 ```
 const Input = styled.input`
   font-size: 1.5em;
@@ -138,6 +139,13 @@ const VideoItem = styled.li`
   }
 `;
 ```
+Again, update the return statement to accomodate the added CSS in JS.
+```
+<VideoItem onClick={() => props.onVideoSelect(props.video)}>
+    <img src={imgUrl} alt="video" />
+    <div>{props.video.snippet.title}</div>
+</VideoItem>
+```
 
 Let's finish in our `index.js` file. Add the import statement, this time above our imports for the other components of our webpage. Then, before our `App` class, paste:
 ```
@@ -162,14 +170,14 @@ Now, we can comment out or delete all of our `styles.scss` file except for the `
 
 ### Step 3: Creating a Nav Bar
 We're going to create a Navigation Bar from scratch and add some nice styled-components to it!
-Create a new file in your /src folder called ```nav-bar.js```. We're going to start with the bare bones of a navigation bar and see how we'd style it. 
+Create a new file in your /components folder called ```nav_bar.js```. We're going to start with the bare bones of a navigation bar and see how we'd style it. 
 ```
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/prefer-stateless-function */
 
 import React, { Component } from 'react';
 
-class Navbar extends Component {
+class NavBar extends Component {
   render() {
     return (
       <Bar>
@@ -185,11 +193,13 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default NavBar;
 ```
 ... Wait a second, what's ```<Bar>```? What's ```<Button>```? What's ```<List>``` and ```<ListItem>```? Great question! For styled-components, we will define a ```const Bar, Button, List,``` and ```ListItem``` that will be a styled div, button, ul, and li. styled-components lets us essentially create classes for each element by declaring them as ```const```.  Go ahead and add the following code above your class Navbar:
 
 ```
+import styled from 'styled-components';
+
 const Bar = styled.div`
 display: flex;
 flex-direction: row;
@@ -221,15 +231,15 @@ color: #F05252;
 `;
 ```
 
-Now let's import Navbar to your ```index.js``` file:
+Now let's import NavBar to your ```index.js``` file:
 
 ```
-import Navbar from './components/nav_bar';
+import NavBar from './components/nav_bar';
 ```
 
 and add it above your ```<SearchBar/>``` in the render function:
 ```
-<div><Navbar /></div>
+<div><NavBar /></div>
 ```
 
 Your navbar should look something like this:
@@ -276,6 +286,7 @@ What about selectors, like ```:hover``` or ```:active``` ? You can add that righ
 
 And there you have it! 
 
+![](https://media.giphy.com/media/3otPoS81loriI9sO8o/giphy.gif)
 
 ## Summary / What you Learned
 
