@@ -31,7 +31,7 @@ and take care of some of our dependencies.
 yarn add lodash.debounce react react-dom react-router axios
 ```
 
-Before we can get into the restyling portion, we probably should install styled-components :confused:
+Before we can get into the restyling portion, we probably should install styled-components
 ```
 npm install --save styled-components
 ```
