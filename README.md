@@ -14,7 +14,7 @@ As we learned in class, some highlights of style-components
 
 ## Overview
 
-At this point, we have all (hopefully) finished Short Assignment 4 and have some experience using React to build a video application.  For this workshop, we are going to restyle our SA4 using CSS in JS.  We’ll walk you through this process step by step, but feel free to change the styles up as you go!
+At this point, we have all (hopefully) finished Short Assignment 4 and have some experience using React to build a video application.  For this workshop, we are going to restyle SA4 using CSS in JS to replace our style.scss sheet.  Once we have successfully transferred the baseline style, we'll see what else we can do with CSS in JS by adding a nav bar to the page and giving it some style!  We’ll walk you through this process step by step, but feel free to change the styles up as you go.
 
 ## Setup
 
