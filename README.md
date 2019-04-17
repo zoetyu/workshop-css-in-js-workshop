@@ -48,7 +48,7 @@ Nice!  Now everything should be set up and we can move on to the fun stuff :thum
 
 ### Step 1: Add your own YouTube API Key
 
-Before we begin styling, edit the `youtube-api.js` file (in the src folder) to include your API key.  You should use the same key you used for the short assignment. 
+Before we begin styling, edit the `youtube-api.js` file (in the src folder) to include your API key.  You should use the same key you used for the short assignment.  This link - https://github.com/dartmouth-cs52-19S/sa4-yourname - should take you to your SA4 repository; your own API key should be found in your src/youtube-api.js.
 ```
 const API_KEY = 'YOUR SAVED API KEY'; // add your own key here
 ```
