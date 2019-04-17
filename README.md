@@ -14,11 +14,11 @@ As we learned in class, some highlights of style-components are:
 
 ## Overview
 
-At this point, we have all (hopefully) finished Short Assignment 4 :grimacing: and have some experience using React to build a video application.  For this workshop, we are going to restyle SA4 using CSS in JS to replace our style.scss sheet.  Once we have successfully transferred the baseline style, we'll see what else we can do with CSS in JS by adding a nav bar to the page and giving it some style!  We’ll walk you through this process step by step, but feel free to change the styles up as you go.
+At this point, we have all (hopefully :grimacing:) finished Short Assignment 4 and have some experience using React to build a video application.  For this workshop, we are going to restyle SA4 using CSS in JS to replace our style.scss sheet.  Once we have successfully transferred the baseline style, we'll see what else we can do with CSS in JS by adding a nav bar to the page and giving it some style!  We’ll walk you through this process step by step, but feel free to change the styles up as you go.
 
 ## Setup
 
-Download your own copy of this repo so you have all of the necessary code on your computer. :computer: `cd` into the workshop-css-in-js-workshop folder (if you couldn’t tell, this is a workshop). You should have a README.md, img folder, package.json, src folder, webpack.config.js, and yarn.lock. Since we are using javascript styling instead of CSS now, most of the files we will be working with will be javascript files. 
+Download your own copy of this repo so you have all of the necessary code on your computer. :computer: cd into the workshop-css-in-js-workshop folder (if you couldn’t tell, this is a workshop). You should have a README.md, img folder, package.json, src folder, webpack.config.js, and yarn.lock. Since we are using javascript styling instead of CSS now, most of the files we will be working with will be javascript files. 
 
 Let's take care of a few more set-up steps before we begin (check again to make sure you are in the correct directory!).  
 
@@ -58,6 +58,8 @@ Now start up your webpack-dev-server!
 yarn start
 ```
 Open the localhost in your browser, and you should see the SA4 frontend webapp with some basic styling.
+
+
 
 ### Step 2: Let's get stylin'
 
